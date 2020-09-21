@@ -1,0 +1,39 @@
+<!doctype html>
+<html ng-app="app">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="content-language" content="pt-br" />
+        <meta charset="utf-8">
+        <title>Office Project</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-route.min.js"></script>
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <script src="app/app.js"></script>
+        <script src="app/routes/routes.js"></script>
+        <script src="app/controllers/purchaseRequestsController.js"></script>
+        <script src="app/controllers/navigatorController.js"></script>
+        <link rel="stylesheet" href="app/styles/main.min.css">
+        
+    </head>
+    <body>
+    
+        <ng-include src="'app/views/navigator.html'" ng-controller="NavigatorController"></ng-include>
+
+        <div ng-view></div>
+ 
+        <footer class="page-footer text-center text-md-left pt-4">
+            <hr class="w-100 clearfix d-md-none">
+            <div class="footer-copyright py-3 text-center">
+                <div class="container-fluid">
+                    © 2020 <a> OfficeProject.com </a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
+
+
+

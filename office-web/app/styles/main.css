@@ -1,0 +1,166 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+  }
+  
+  body{
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  nav{
+    background: #4dd2ff;
+    height: 80px;
+    width: 100%;
+  }
+  
+  label.logo {
+    color: #fff;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+  }
+  
+  nav ul{
+    float: right;
+    margin-right: 20px;
+  }
+  
+  nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+  }
+  
+  nav ul li a{
+    color: #fff;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+  
+  }
+  
+  .active, a:hover{
+    background: #1ac6ff;
+    transition: .5s;
+  }
+  
+  .checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  
+  #checkbox{
+    display: none;
+  }
+  
+  @media (max-width: 950px){
+    label.logo{
+      font-size: 30px;
+      padding-left: 50px;
+    }
+  
+    nav ul li a{
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 860px){
+  
+    .checkbtn{
+      display: block;
+    }
+  
+    label.logo{
+      font-size: 30px;
+      padding-left: 50px;
+    }
+  
+    ul{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #e6f9ff;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+    }
+  
+    nav ul li {
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+    }
+  
+    nav ul li a{
+      color: #061733;
+      font-size: 20px;
+    }
+  
+    #checkbox:checked ~ ul{
+      left: 0;
+    }
+
+    .container-purchase-request {
+ 
+      margin-top: 0px;
+      display: flex;
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+.container-purchase-request {
+ 
+  margin-top: 120px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+body nav ul li .user-dropdown {
+  background: #4dd2ff;
+}
+
+body nav ul li .user-dropdown a {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.jumbotron {
+  margin-top: 130px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.jumbotron .container h1 {
+  text-align: center;
+}
+
+.jumbotron .container p {
+  text-align: center;
+}
+
+footer {
+  
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.double-nav .breadcrumb-dn {
+  color: #fff;
+}
+  

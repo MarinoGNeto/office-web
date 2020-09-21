@@ -1,0 +1,55 @@
+
+<div class="container-purchase-request">
+    <div class="table-area">
+        <h2>Solicitações de Compra</h2>
+        <table class="table" id="table-id">
+            <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Solicitante</th>
+                <th scope="col">Descrição</th>
+                <th scope="col">Valor</th>
+                <th scope="col">Status</th>
+                <th scope="col">Aprovar</th>
+                <th scope="col">Reprovar</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="requests in requestsList" data-id="{{requestsList.indexOf(requests)}}">
+                <td class="id-request" id="id-request" >{{requests.id}}</td>
+                <td >{{requests.requester}}</td>
+                <td>{{requests.itemDescription}}</td>
+                <td>{{requests.productValue}}</td>
+                <td>{{requests.status}}</td>
+                <td><button type="button" class="btn btn-success" onclick="window.location.reload()" ng-click="changeStatusToApproved($index)">Aprovar</button></td>
+                <td><button type="submit" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat" ng-click="changeStatusToDisapproved($index)">Reprovar</button></td>
+            </tr>  
+            </tbody>
+        </table>
+
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Tem certeza que deseja reprovar a solicitação de compra selecionada?</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form class="updateStatus()">
+                    <div class="form-group">
+                      <label for="message-text" class="col-form-label">Motivo da Reprovação*:</label>
+                      <textarea class="form-control" id="message-text" ng-model="requestDisapproved.disapprovedMessage" required></textarea>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="submit" class="btn btn-danger" onclick="window.location.reload()" >Confirmar Reprovação</button>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+</div>    
+    

@@ -1,0 +1,27 @@
+<nav>
+    <input type="checkbox" id="checkbox">
+    <label for="checkbox" class="checkbtn">
+        <i class="fas fa-bars"></i>
+    </label>
+    <label class="logo">OfficeProject</label>
+    <ul>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle"id="navbarDropdown" ng-show="logged == false" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Seleção de Usuário
+            </a>
+            <div class="dropdown-menu user-dropdown" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item " ng-click="isRequester()" href="#/">Solicitante</a>
+              <a class="dropdown-item" ng-click="isStorekeeper()" href="#/">Almoxarife</a>
+              <a class="dropdown-item" ng-click="isAdministrator()" href="#/">Administrador</a>
+            </div>
+          </li>
+        <li><a href="#/">Home</a></li>
+        <li><a href="#/purchaseRequests" ng-show="requester == true">Solicitação de Compra</a></li>
+        <li><a href="#/storekeeperRequests" ng-show="storekeeper == true">Solicitações de Compra</a></li>
+        <li><a href="#/requests" ng-show="administrator == true">Lista de Solicitações</a></li>
+        <li><a href="#/" ng-click="logout()" >Logout</a></li>
+      </div>
+    </ul>
+
+    
+</nav>

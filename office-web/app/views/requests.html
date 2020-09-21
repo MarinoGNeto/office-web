@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+        <h2>Lista de Solicitações</h2>
+        <br>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Filtrar resultados" aria-label="Search" ng-model="search">
+        </form>
+        <br>
+        <table class="table" id="table-id">
+            <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Solicitante</th>
+                <th scope="col">Descrição</th>
+                <th scope="col">Valor</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="requests in requestsList | filter : search" data-id="{{requestsList.indexOf(requests)}}">
+                    <td class="id-request" id="id-request" >{{requests.id}}</td>    
+                    <td>{{requests.requester}}</td>
+                    <td>{{requests.itemDescription}}</td>
+                    <td>{{requests.productValue}}</td>
+                    <td>{{requests.status}}</td>
+                </tr>  
+            </tbody>
+        </table>
+    </div>
+</div>
