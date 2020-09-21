@@ -1,6 +1,6 @@
 # Office Web
 
-Application of approval flow of purchase requests of office supplies built on the basis of AngularJs. It receive data from the office-api project!
+Application of Approval flow to purchase requests of office supplies built on the basis of AngularJs. It receive data from the office-api project!
 
 ## Getting Started and Installing it
 
