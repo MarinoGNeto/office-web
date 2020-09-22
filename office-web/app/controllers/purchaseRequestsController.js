@@ -18,7 +18,6 @@ function PurchaseRequestsController($scope, $http) {
         disapprovedMessage : ""
     };
     
-
     $scope.saveForm = function() {
 
         $http.post('http://localhost:8080/purchaseRequest', $scope.request).success(function(data) {
@@ -48,10 +47,4 @@ function PurchaseRequestsController($scope, $http) {
         $http.put('http://localhost:8080/purchaseRequest/disapprove/' + $scope.requestsList[index].id, $scope.requestDisapproved).success(function(data) {
         })
     };
-
-    
-
-
-
-
 };
